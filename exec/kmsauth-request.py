@@ -10,10 +10,10 @@ generator = kmsauth.KMSTokenGenerator(
     sys.argv[1],
     # Encryption context to use
     {
-        # It's from this user
-        'from':sys.argv[2],
         # We're authenticating to this service
-        'to': sys.argv[3],
+        'to': sys.argv[2],
+        # It's from this user
+        'from':sys.argv[3],
         # This token is for a user
         'user_type': 'user'
     },
