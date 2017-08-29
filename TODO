@@ -1,0 +1,1 @@
+set -- $(fogg assume $operator kmsauth request alias/$key $username $service); immanent kmsauth validate alias/$key $service $1 $2m

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+function main {
+  local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
+  source "$shome/script/profile"
+  source normalize
+
+  set +u
+  source "$shome/vendor/virtualenv/bin/activate"
+  exec python "$shome/exec/kmsauth-validate.py" "$@"
+}
+
+source sub "$BASH_SOURCE" "$@"

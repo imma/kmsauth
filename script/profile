@@ -6,7 +6,7 @@ function _kmsauth_profile {
   #export ANSIBLE_ROLES_PATH="$shome/roles${ANSIBLE_ROLES_PATH:+:${ANSIBLE_ROLES_PATH}}"
   #export ANSIBLE_LIBRARY="$shome/library${ANSIBLE_LIBRARY:+:${ANSIBLE_LIBRARY}}"
 
-  KMSAUTH_VERSION='0.0.1'
+  KMSAUTH_VERSION='0.2.0'
 }
 
 _kmsauth_profile
