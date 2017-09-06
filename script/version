@@ -4,7 +4,7 @@ function version {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  local ver_kmsauth="$(vendor/virtualenv/bin/pip list --format json 2>/dev/null | jq -r 'map(select(.name == "kmsauth"))[].version' || true)"
+  local ver_kmsauth="$($shome/vendor/virtualenv/bin/pip list --format json 2>/dev/null | jq -r 'map(select(.name == "kmsauth"))[].version' || true)"
   jq -n --arg kmsauth "$ver_kmsauth" '{kmsauth: $kmsauth}'
 }
 
