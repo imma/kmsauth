@@ -5,9 +5,8 @@ function main {
   source "$shome/script/profile"
   source normalize
 
-  set +u
-  source "$shome/vendor/virtualenv/bin/activate"
-  exec python "$shome/exec/kmsauth-validate.py" "$@"
+  cd "$shome"
+  exec pipenv run python "$shome/exec/kmsauth-validate.py" "$@"
 }
 
 source sub "$BASH_SOURCE" "$@"
